@@ -37,6 +37,7 @@ a:hover {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1rem;
     grid-auto-flow: row;
+    padding-left: 0px;
 }
 .projects > li {
     padding: 1.5rem;

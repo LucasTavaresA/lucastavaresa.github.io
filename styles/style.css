@@ -24,16 +24,7 @@ a:hover {
 }
 .main {
     font-size: 20px;
-    margin: 0 10vw;
-}
-.projects li {
-    list-style-type: none;
-    border: 1px solid rgb(158, 151, 151);
-    border-radius: 5px;
-    padding: 1rem;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.5;
+    margin: 0 5vw;
 }
 .projects {
     display: grid;
@@ -42,10 +33,42 @@ a:hover {
     grid-auto-flow: row;
     padding-left: 0px;
 }
+.projects li {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr;
+    border: 1px solid rgb(158, 151, 151);
+    border-radius: 5px;
+    padding: 5%;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+}
 .projects li p {
     font-size: 14px;
     margin: 0;
     margin-top: 5px;
+}
+.language {
+    display: grid;
+    grid-template-columns: 0.5fr 10fr;
+}
+.language div{
+    position: relative;
+    top: 35%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.html {
+    background-color: #e34c26;
+}
+.js {
+    background-color: #f1e05a;
+}
+.cs {
+    background-color: #178600;
 }
 @media screen and (max-width: 800px) {
     .projects {

@@ -75,11 +75,20 @@ a:hover {
         grid-template-columns: 1fr;
     }
 }
+.stats {
+    display: grid;
+    justify-content: center;
+}
+.statspan {
+    width: 48%;
+}
+.statsgit {
+    width: 49%;
+}
 .footer img {
     block-size: 25px;
 }
 .footer {
     display: grid;
-    display: grid; 
     grid-template-columns: 2fr 0.1fr 0.1fr 2fr;
 }

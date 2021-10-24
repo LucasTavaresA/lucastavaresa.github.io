@@ -80,5 +80,6 @@ a:hover {
 }
 .footer {
     display: grid;
-    justify-items: center;
+    display: grid; 
+    grid-template-columns: 2fr 0.1fr 0.1fr 2fr;
 }

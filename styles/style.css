@@ -22,6 +22,9 @@ a:hover {
     border: 1px solid #292835;
     background-color: #292835;
 }
+h1 {
+    margin: 10px 0;
+}
 .main {
     font-size: 20px;
     margin: 0 2.5vw;

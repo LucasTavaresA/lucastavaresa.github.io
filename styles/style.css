@@ -32,10 +32,10 @@ h1 {
 .projects {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 0.5rem;
     grid-auto-flow: row;
     padding: 0px;
-    margin: 5px;
+    grid-gap: 1rem;
+    margin: 5px 0;
 }
 .projects li {
     list-style-type: none;

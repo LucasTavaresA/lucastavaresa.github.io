@@ -32,10 +32,10 @@ h1 {
 .projects {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1rem;
+    grid-gap: 0.5rem;
     grid-auto-flow: row;
     padding: 0px;
-    margin: 15px;
+    margin: 5px;
 }
 .projects li {
     list-style-type: none;
@@ -52,7 +52,6 @@ h1 {
 .projects li p {
     font-size: 14px;
     margin: 0;
-    margin-top: 5px;
 }
 .language {
     display: grid;
@@ -98,7 +97,7 @@ h1 {
 }
 .source {
     text-align: center;
-    padding: 8px 0;
+    padding: 5px 0;
     margin: 0;
 }
 .footer img {

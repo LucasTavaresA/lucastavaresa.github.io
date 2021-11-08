@@ -76,6 +76,9 @@ h1 {
 .roff {
     background-color: #ecdebe;
 }
+.C {
+    background-colot: #555555;
+}
 @media screen and (max-width: 800px) {
     .projects {
         grid-template-columns: 1fr;

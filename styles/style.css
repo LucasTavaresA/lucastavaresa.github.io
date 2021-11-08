@@ -79,6 +79,9 @@ h1 {
 .c {
     background-color: #555555;
 }
+.haskell {
+    background-color: #5e5086;
+}
 @media screen and (max-width: 800px) {
     .projects {
         grid-template-columns: 1fr;

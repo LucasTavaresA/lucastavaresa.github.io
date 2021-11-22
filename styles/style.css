@@ -90,6 +90,7 @@ h1 {
 .stats {
     display: grid;
     justify-content: center;
+    margin: 10px 0;
 }
 .statslangs {
     width: 42%;

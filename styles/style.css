@@ -1,15 +1,16 @@
-html, body {
-  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+body {
   color: white;
-  max-width: 100%;
-  max-height: 100%;
+  background-color: #010409;
   margin: 0;
-  background-color: #00050f;
+}
+
+a:visited {
+  color: #0060ff;
+  text-decoration: none;
 }
 
 a,
 a:link,
-a:visited,
 a:active {
   color: #71b7ff;
   text-decoration: none;
@@ -21,7 +22,6 @@ a:hover {
 
 .header {
   text-align: center;
-  margin: 0;
   border: 1px solid #292835;
   background-color: #292835;
 }
@@ -30,81 +30,80 @@ h1 {
   margin: 5px 0;
 }
 
-.main {
-  font-size: 20px;
-  margin: 0 2.5vw;
+.repos {
+  margin: 2vw 2.5vw 0 2.5vw;
 }
 
-.projects {
+#projects {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-flow: row;
   padding: 0px;
   grid-gap: 1rem;
-  margin: 5px 0;
 }
 
-.projects li {
+#projects li {
   list-style-type: none;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 0.1fr 1fr 0.1fr;
-  border: 1px solid rgb(158, 151, 151);
-  border-radius: 5px;
-  padding: 5%;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.5;
+  border: 1px solid #606773;
+  border-radius: 8px;
+  padding: 20px;
 }
 
-.projects li p {
-  font-size: 14px;
+#projects li p {
   margin: 0;
 }
 
-.language {
+.info {
   display: grid;
-  grid-template-columns: 0.5fr 10fr;
+  grid-template-rows: 2vw;
+  grid-template-columns: 1fr 2fr 1fr 20px 1fr 10fr;
+  justify-content: center;
+  align-items: center;
 }
 
-.language div{
-  position: relative;
-  top: 25%;
+.language {
   width: 12px;
   height: 12px;
   border-radius: 50%;
 }
 
-.html {
+#html {
   background-color: #e34c26;
 }
 
-.js {
+#js {
   background-color: #f1e05a;
 }
 
-.cs {
+#cs {
   background-color: #178600;
 }
 
-.lua {
+#lua {
   background-color: #000080;
 }
 
-.shell {
+#shell {
   background-color: #89e051;
 }
 
-.c {
+#c {
   background-color: #555555;
 }
 
-.haskell {
+#haskell {
   background-color: #5e5086;
 }
 
 @media screen and (max-width: 800px) {
-  .projects {
+  #projects {
     grid-template-columns: 1fr;
+  }
+
+  .info {
+    grid-template-columns: 1fr 1fr 20fr;
   }
 }

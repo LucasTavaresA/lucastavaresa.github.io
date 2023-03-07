@@ -56,6 +56,13 @@ h1 {
   margin: 0;
 }
 
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
 .info {
   display: grid;
   grid-template-rows: 2vw;

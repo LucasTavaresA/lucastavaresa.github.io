@@ -14,6 +14,7 @@ function getStarCount(repo, element) {
     return __awaiter(this, void 0, void 0, function* () {
         const stars = element.querySelectorAll("#stars");
         const count = element.querySelector("#stars p");
+        const description = element.querySelector("#description");
         return octokit.rest.repos
             .get({
             owner: "LucasTavaresA",
@@ -23,16 +24,19 @@ function getStarCount(repo, element) {
             stars[0].setAttribute("href", data.html_url + "/stargazers");
             stars[1].setAttribute("href", data.html_url + "/stargazers");
             count.textContent = data.stargazers_count.toString();
+            description.textContent = data.description.toString();
+            stars[0].style.display = "block";
         })
             .catch(() => {
             count.textContent = "0";
+            stars[0].style.display = "block";
         });
     });
 }
 const projects = document.querySelectorAll("#projects li");
 projects.forEach((project) => {
     const href = project.querySelector("a").getAttribute("href");
-    const regex = /\/([a-z-]+)\/?$/gim;
+    const regex = /\/([a-z-.]+)\/?$/gim;
     const matches = regex.exec(href);
     if (matches) {
         getStarCount(matches[1], project);

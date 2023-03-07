@@ -1,8 +1,9 @@
+// @ts-ignore
 const octokit = new Octokit();
 
 interface RepoData {
-    html_url: string
-    stargazers_count: number
+    html_url: string;
+    stargazers_count: number;
 }
 
 async function getStarCount(repo: string, element: HTMLLIElement) {
@@ -10,21 +11,19 @@ async function getStarCount(repo: string, element: HTMLLIElement) {
         element.querySelectorAll("#stars");
     const count: HTMLParagraphElement = element.querySelector("#stars p")!;
 
-    return (
-        octokit.rest.repos
-            .get({
-                owner: "LucasTavaresA",
-                repo: repo,
-            })
-            .then(({ data }: { data: RepoData }) => {
-                stars[0].setAttribute("href", data.html_url + "/stargazers");
-                stars[1].setAttribute("href", data.html_url + "/stargazers");
-                count.textContent = data.stargazers_count.toString();
-            })
-            .catch(() => {
-                count.textContent = "0";
-            })
-    );
+    return octokit.rest.repos
+        .get({
+            owner: "LucasTavaresA",
+            repo: repo,
+        })
+        .then(({ data }: { data: RepoData }) => {
+            stars[0].setAttribute("href", data.html_url + "/stargazers");
+            stars[1].setAttribute("href", data.html_url + "/stargazers");
+            count.textContent = data.stargazers_count.toString();
+        })
+        .catch(() => {
+            count.textContent = "0";
+        });
 }
 
 const projects: NodeListOf<HTMLLIElement> =

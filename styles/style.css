@@ -44,12 +44,9 @@ h1 {
 
 #projects li {
   list-style-type: none;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.1fr 1fr 0.1fr;
   border: 1px solid #606773;
   border-radius: 8px;
-  padding: 20px;
+  padding: 15px;
 }
 
 #projects li p {
@@ -71,37 +68,62 @@ h1 {
   align-items: center;
 }
 
+.topics {
+  display: inline-flex;
+  gap: 5px;
+  white-space: nowrap;
+  overflow: clip;
+  width: 25vw;
+}
+
+.topics a {
+  background-color: #007777;
+  border: 1px solid #009999;
+  border-radius: 25px;
+  padding: 0px 5px;
+  font-size: 0.5em;
+  text-decoration: none;
+}
+
+.topics a:hover,
+.topics a:visited {
+  border: 1px solid #007777;
+  background-color: #009999;
+  color: #007777;
+  text-decoration: none;
+}
+
 .language {
   width: 12px;
   height: 12px;
   border-radius: 50%;
 }
 
-#html {
+#HTML {
   background-color: #e34c26;
 }
 
-#js {
+#JavaScript {
   background-color: #f1e05a;
 }
 
-#cs {
+#C\# {
   background-color: #178600;
 }
 
-#lua {
+#Lua {
   background-color: #000080;
 }
 
-#shell {
+#Shell {
   background-color: #89e051;
 }
 
-#c {
+#C {
   background-color: #555555;
 }
 
-#haskell {
+#Haskell {
   background-color: #5e5086;
 }
 
@@ -112,5 +134,11 @@ h1 {
 
   .info {
     grid-template-columns: 1fr 1fr 20fr;
+  }
+
+  .topics {
+    gap: 10px;
+    overflow: unset;
+    width: unset;
   }
 }

@@ -81,15 +81,15 @@ h1 {
   border: 1px solid #009999;
   border-radius: 25px;
   padding: 0px 5px;
-  font-size: 0.5em;
+  font-size: 0.8em;
   text-decoration: none;
 }
 
 .topics a:hover,
 .topics a:visited {
-  border: 1px solid #007777;
-  background-color: #009999;
-  color: #007777;
+  border-color: revert;
+  background-color: revert;
+  color: revert;
   text-decoration: none;
 }
 
@@ -140,5 +140,9 @@ h1 {
     gap: 10px;
     overflow: unset;
     width: unset;
+  }
+
+  .topics a {
+    font-size: unset;
   }
 }

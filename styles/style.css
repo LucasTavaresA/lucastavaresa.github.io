@@ -4,6 +4,14 @@ body {
   margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
 a:visited {
   color: #0060ff;
   text-decoration: none;
@@ -26,12 +34,8 @@ a:hover {
   background-color: #292835;
 }
 
-h1 {
-  margin: 5px 0;
-}
-
 .repos {
-  margin: 2vw 2.5vw 0 2.5vw;
+  margin: 0 2vw;
 }
 
 #projects {
@@ -43,10 +47,12 @@ h1 {
 }
 
 #projects > li {
+  display: grid;
   list-style-type: none;
   border: 1px solid #606773;
   border-radius: 8px;
-  padding: 15px;
+  padding: 1vw;
+  grid-row-gap: 5px;
 }
 
 #projects li p {

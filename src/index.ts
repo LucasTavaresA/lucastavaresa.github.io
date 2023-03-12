@@ -77,9 +77,6 @@ async function GetRepoInfo(repo: string) {
             info.appendChild(lang_text);
             lang_text.textContent = data.language;
 
-            const padding = document.createElement("div");
-            info.appendChild(padding);
-
             const svg = document.createElement("a");
             info.appendChild(svg);
             svg.setAttribute("id", "stars");

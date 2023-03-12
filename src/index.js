@@ -68,8 +68,6 @@ function GetRepoInfo(repo) {
             const lang_text = document.createElement("p");
             info.appendChild(lang_text);
             lang_text.textContent = data.language;
-            const padding = document.createElement("div");
-            info.appendChild(padding);
             const svg = document.createElement("a");
             info.appendChild(svg);
             svg.setAttribute("id", "stars");

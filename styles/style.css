@@ -73,7 +73,7 @@ h1 {
   gap: 5px;
   white-space: nowrap;
   overflow: hidden;
-  width: 28vw;
+  width: 100%;
   list-style: none;
   position: relative;
   padding: 0;
@@ -152,8 +152,6 @@ h1 {
 
   .topics {
     gap: 10px;
-    overflow: unset;
-    width: unset;
   }
 
   .topics a {

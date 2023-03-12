@@ -91,8 +91,9 @@ h1 {
 }
 
 .topics li a {
-  background-color: #007777;
-  border: 1px solid #009999;
+  background-color: #009999;
+  border: 1px solid #007777;
+  color: #007777;
   border-radius: 25px;
   padding: 0px 5px;
   font-size: 0.8em;
@@ -101,9 +102,9 @@ h1 {
 
 .topics a:hover,
 .topics a:visited {
-  border-color: revert;
-  background-color: revert;
-  color: revert;
+  background-color: #007777;
+  border: 1px solid #009999;
+  color: #009999;
   text-decoration: none;
 }
 

@@ -52,13 +52,15 @@ async function GetRepoInfo(repo: string) {
             li.appendChild(description);
             description.textContent = data.description;
 
-            const topics = document.createElement("div");
+            const topics = document.createElement("ul");
             topics.setAttribute("class", "topics");
             li.appendChild(topics);
             data.topics.forEach((topic) => {
-                const t = document.createElement("a");
-                t.innerText = topic;
-                t.setAttribute("href", "https://github.com/topics/" + topic);
+                const t = document.createElement("li");
+                const a = document.createElement("a");
+                t.appendChild(a);
+                a.setAttribute("href", "https://github.com/topics/" + topic);
+                a.innerText = topic;
                 topics.appendChild(t);
             });
 

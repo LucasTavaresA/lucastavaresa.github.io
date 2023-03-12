@@ -42,7 +42,7 @@ h1 {
   grid-gap: 1rem;
 }
 
-#projects li {
+#projects > li {
   list-style-type: none;
   border: 1px solid #606773;
   border-radius: 8px;
@@ -72,11 +72,25 @@ h1 {
   display: inline-flex;
   gap: 5px;
   white-space: nowrap;
-  overflow: clip;
-  width: 25vw;
+  overflow: hidden;
+  width: 28vw;
+  list-style: none;
+  position: relative;
+  padding: 0;
 }
 
-.topics a {
+.topics::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #00000000 80%, #000000ff 100%);
+  pointer-events: none;
+}
+
+.topics li a {
   background-color: #007777;
   border: 1px solid #009999;
   border-radius: 25px;

@@ -1,4 +1,5 @@
-// @ts-ignore
+import { Octokit } from '@octokit/rest';
+
 const octokit = new Octokit();
 
 const star_svg: Readonly<string> = `<svg aria-label="star" role="img" height="16" viewBox="0 0 16 12" version="1.1" width="16" data-view-component="true">
@@ -19,43 +20,33 @@ const repos: ReadonlyArray<string> = [
 
 const repolist = document.getElementById("projects") as HTMLUListElement;
 
-interface RepoData {
-    name: string;
-    description: string;
-    html_url: string;
-    homepage: string;
-    language: string;
-    stargazers_count: number;
-    topics: Array<string>;
-}
-
 async function GetRepoInfo(repo: string) {
     return octokit.rest.repos
         .get({
             owner: "LucasTavaresA",
             repo: repo,
         })
-        .then(({ data }: { data: RepoData }) => {
+        .then((response) => {
             const li = document.createElement("li");
 
             const name = document.createElement("a");
             li.appendChild(name);
-            if (data.homepage != "") {
-                name.setAttribute("href", data.homepage);
-                name.innerHTML = `<p>` + data.name + clip_svg + `</p>`;
+            if (response.data.homepage != "") {
+                name.setAttribute("href", response.data.homepage!);
+                name.innerHTML = `<p>` + response.data.name + clip_svg + `</p>`;
             } else {
-                name.setAttribute("href", data.html_url);
-                name.textContent = data.name;
+                name.setAttribute("href", response.data.html_url);
+                name.textContent = response.data.name;
             }
 
             const description = document.createElement("p");
             li.appendChild(description);
-            description.textContent = data.description;
+            description.textContent = response.data.description;
 
             const topics = document.createElement("ul");
             topics.setAttribute("class", "topics");
             li.appendChild(topics);
-            data.topics.forEach((topic) => {
+            response.data.topics!.forEach((topic) => {
                 const t = document.createElement("li");
                 const a = document.createElement("a");
                 t.appendChild(a);
@@ -70,27 +61,27 @@ async function GetRepoInfo(repo: string) {
 
             const language = document.createElement("div");
             info.appendChild(language);
-            language.setAttribute("id", data.language);
+            language.setAttribute("id", response.data.language!);
             language.setAttribute("class", "language");
 
             const lang_text = document.createElement("p");
             info.appendChild(lang_text);
-            lang_text.textContent = data.language;
+            lang_text.textContent = response.data.language;
 
             const svg = document.createElement("a");
             info.appendChild(svg);
             svg.setAttribute("id", "stars");
-            svg.setAttribute("href", data.html_url + "/stargazers");
+            svg.setAttribute("href", response.data.html_url + "/stargazers");
             svg.innerHTML = star_svg;
 
             const stars = document.createElement("a");
             info.appendChild(stars);
             stars.setAttribute("id", "stars");
-            stars.setAttribute("href", data.html_url + "/stargazers");
+            stars.setAttribute("href", response.data.html_url + "/stargazers");
 
             const count = document.createElement("p");
             stars.appendChild(count);
-            count.textContent = data.stargazers_count.toString();
+            count.textContent = response.data.stargazers_count.toString();
 
             repolist.prepend(li);
         })

@@ -158,4 +158,8 @@ a:hover {
   .topics a {
     font-size: unset;
   }
+
+	#stats {
+		width: 100%;
+	}
 }

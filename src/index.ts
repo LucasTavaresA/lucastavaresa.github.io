@@ -44,6 +44,12 @@ async function GetRepoInfo(repo: string) {
 					`</a></li>`;
 			});
 
+			const spinner = document.getElementById("spinner");
+
+			if (spinner) {
+				spinner.remove();
+			}
+
 			// prettier-ignore
 			repolist!.innerHTML +=
 				`<li>` +
@@ -65,8 +71,8 @@ async function GetRepoInfo(repo: string) {
 		});
 }
 
-if (repolist != null) {
-	repos.forEach((repo) => {
-		GetRepoInfo(repo);
-	});
+if (repolist) {
+	for (let i = 0; i < repos.length; i++) {
+		GetRepoInfo(repos[i]);
+	}
 }

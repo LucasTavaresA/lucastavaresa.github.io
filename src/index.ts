@@ -7,7 +7,7 @@ const star_svg = `<svg aria-label="star" role="img" height="16" viewBox="0 0 16 
 const repos = [
 	"Jokenpo",
 	"Eval.cs",
-	"calculadora-csharp",
+	"nelua-cellular-automata",
 	"sgrade",
 	"Exercicios-CSharp-OOP",
 	"SingleComment.nvim",

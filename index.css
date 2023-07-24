@@ -18,8 +18,7 @@ a:visited {
 }
 
 a,
-a:link,
-a:active {
+a:link {
   color: #71b7ff;
   text-decoration: none;
 }
@@ -38,7 +37,7 @@ a:hover {
   margin: 0 2vw;
 }
 
-#projects {
+#repolist {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -47,7 +46,7 @@ a:hover {
   grid-gap: 1rem;
 }
 
-#projects > li {
+#repolist > li {
   display: grid;
   list-style-type: none;
   border: 1px solid #606773;
@@ -56,12 +55,12 @@ a:hover {
   grid-row-gap: 5px;
 }
 
-#projects li p {
+#repolist li p {
   margin: 0;
 }
 
 #spinner {
-	margin: 150px 0;
+  margin: 150px 0;
 }
 
 #spinner_animation {
@@ -172,7 +171,7 @@ a:hover {
 }
 
 @media screen and (max-width: 800px) {
-  #projects {
+  #repolist {
     grid-template-columns: 1fr;
   }
 

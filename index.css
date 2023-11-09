@@ -1,3 +1,8 @@
+html *
+{
+  font-family: Roboto, sans-serif;
+}
+
 body {
   color: white;
   background-color: #010409;
@@ -185,5 +190,9 @@ a:hover {
 
   #stats {
     width: 100%;
+  }
+
+  #gh_logo {
+    height: 3vw !important;
   }
 }

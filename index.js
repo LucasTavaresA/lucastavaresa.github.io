@@ -45,8 +45,8 @@ if (repolist) {
                 homepage = response.html_url;
                 name = `<p>${response.name} ${github_logo_svg}</p>`;
             }
-            for (let i = 0; i < topics.length; i++) {
-                topics += `<li><a href="https://github.com/topics/${topics[i]}">${topics[i]}</a></li>`;
+            for (let i = 0; i < response.topics.length; i++) {
+                topics += `<li><a href="https://github.com/topics/${response.topics[i]}">${response.topics[i]}</a></li>`;
             }
             const spinner = document.getElementById("spinner");
             if (spinner) {

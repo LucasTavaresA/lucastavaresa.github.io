@@ -125,8 +125,8 @@ a:hover {
 
 .topics li a {
   background-color: #009999;
-  border: 1px solid #007777;
-  color: #007777;
+  border: 1px solid #c7c7c7;
+  color: #ffffff;
   border-radius: 25px;
   padding: 0px 5px;
   font-size: 0.8em;
@@ -135,9 +135,9 @@ a:hover {
 
 .topics a:hover,
 .topics a:visited {
-  background-color: #007777;
-  border: 1px solid #009999;
-  color: #009999;
+  background-color: #005a5a;
+  border: 1px solid #00c7c7;
+  color: #00c7c7;
   text-decoration: none;
 }
 
